@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { useState } from 'react'
 import AppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box'
 import Toolbar from '@mui/material/Toolbar'
@@ -9,20 +9,16 @@ import MenuIcon from '@mui/icons-material/Menu'
 import Container from '@mui/material/Container'
 import Button from '@mui/material/Button'
 import MenuItem from '@mui/material/MenuItem'
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
+
+import CartWidget from './CartWidget'
 
 const pages = ['Home', 'Category 1', 'Category 2', 'Category 3']
 
 const NavBar = () => {
-  const [anchorElNav, setAnchorElNav] = React.useState(null)
+  const [anchorElNav, setAnchorElNav] = useState(null)
 
-  const handleOpenNavMenu = (e) => {
-    setAnchorElNav(e.currentTarget)
-  }
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null)
-  }
+  const handleOpenNavMenu = (e) => setAnchorElNav(e.currentTarget)
+  const handleCloseNavMenu = () => setAnchorElNav(null)
 
   return (
     <AppBar position="static">
@@ -93,11 +89,7 @@ const NavBar = () => {
             ))}
           </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
-            <IconButton color="inherit">
-              <ShoppingCartIcon />
-            </IconButton>
-          </Box>
+          <CartWidget />
         </Toolbar>
       </Container>
     </AppBar>
