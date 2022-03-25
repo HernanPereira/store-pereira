@@ -1,6 +1,6 @@
 import CssBaseline from '@mui/material/CssBaseline'
 import NavBar from './components/NavBar'
-// import ItemListContainer from './components/Items/ItemListContainer'
+import ItemDetailContainer from './components/Detail/ItemDetailContainer'
 
 import ItemListContainer from './components/List'
 
@@ -11,6 +11,7 @@ function App() {
       <NavBar />
       <main>
         <ItemListContainer />
+        <ItemDetailContainer />
       </main>
     </>
   )

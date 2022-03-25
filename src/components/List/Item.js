@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography'
 import ItemCount from '../Detail/ItemCount'
 
 const Item = ({ item, onAdd }) => {
-  const { title, description, price, image, stock } = item
+  const { id, title, description, price, image, stock } = item
 
   return (
     <Card align="center">
@@ -57,7 +57,12 @@ const Item = ({ item, onAdd }) => {
         </Stack>
 
         <Stack sx={{ mt: 2 }}>
-          <Button variant="contained">Ver detalle</Button>
+          <Button
+            onClick={() => console.log('Product ID: ', id)}
+            variant="contained"
+          >
+            Ver detalle
+          </Button>
         </Stack>
       </CardContent>
     </Card>

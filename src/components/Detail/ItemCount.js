@@ -4,7 +4,7 @@ import Stack from '@mui/material/Stack'
 import Button from '@mui/material/Button'
 import ButtonGroup from '@mui/material/ButtonGroup'
 
-const ItemCount = ({ stock, initial, onAdd }) => {
+const ItemCount = ({ stock, initial, onAdd, text }) => {
   const [qty, setQty] = useState(stock === 0 ? stock : initial)
 
   const handleIncrement = () => qty < stock && setQty(qty + 1)
@@ -28,13 +28,16 @@ const ItemCount = ({ stock, initial, onAdd }) => {
         </Button>
       </ButtonGroup>
 
-      <Stack>
+      <Stack alignItems="center">
         <Button
           variant="outlined"
           onClick={() => onAdd(qty)}
           disabled={stock === 0 && true}
+          sx={{
+            width: { xs: '100%', md: 'auto' },
+          }}
         >
-          Agregar al carrito
+          {!text ? 'Agregar al carrito' : text}
         </Button>
       </Stack>
     </div>

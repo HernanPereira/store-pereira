@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-import getAllProducts from '../../helpers/getAllProducts'
+import { getAllProducts } from '../../helpers/getAllProducts'
 import ItemList from './ItemList'
 
 import Container from '@mui/material/Container'
@@ -42,7 +42,6 @@ const ItemListContainer = ({ heading, greeting }) => {
           >
             {greeting}
           </Typography>
-          {/* <ItemCount stock={5} initial={1} onAdd={onAdd} /> */}
         </Box>
       </Container>
       <Container maxWidth="lg">
