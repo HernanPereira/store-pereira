@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 import Stack from '@mui/material/Stack'
 import Card from '@mui/material/Card'
 import CardMedia from '@mui/material/CardMedia'
@@ -45,7 +47,11 @@ const Item = ({ item, onAdd }) => {
           color="text.primary"
           gutterBottom
         >
-          ${price}
+          ${price}{' '}
+          {/* {category
+            .toLowerCase()
+            .replace(/ /g, '-')
+            .replace(/[^\w-]+/g, '')} */}
         </Typography>
 
         <Typography sx={{ mt: 1.5, fontSize: 14 }} color="text.secondary">
@@ -57,10 +63,7 @@ const Item = ({ item, onAdd }) => {
         </Stack>
 
         <Stack sx={{ mt: 2 }}>
-          <Button
-            onClick={() => console.log('Product ID: ', id)}
-            variant="contained"
-          >
+          <Button variant="contained" component={Link} to={`/item/${id}`}>
             Ver detalle
           </Button>
         </Stack>

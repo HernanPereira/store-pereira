@@ -1,3 +1,5 @@
+import { NavLink } from 'react-router-dom'
+
 import React, { useState } from 'react'
 import AppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box'
@@ -9,14 +11,17 @@ import MenuIcon from '@mui/icons-material/Menu'
 import Container from '@mui/material/Container'
 import Button from '@mui/material/Button'
 import MenuItem from '@mui/material/MenuItem'
+import StorefrontOutlinedIcon from '@mui/icons-material/StorefrontOutlined'
 
 import CartWidget from './CartWidget'
+import ContactWidget from './ContactWidget'
 
-const pages = ['Home', 'Category 1', 'Category 2', 'Category 3']
+import { getCategories } from '../../helpers/getAllProducts'
 
 const NavBar = () => {
   const [anchorElNav, setAnchorElNav] = useState(null)
 
+  const categoryArr = getCategories()
   const handleOpenNavMenu = (e) => setAnchorElNav(e.currentTarget)
   const handleCloseNavMenu = () => setAnchorElNav(null)
 
@@ -27,11 +32,26 @@ const NavBar = () => {
           <Typography
             variant="h6"
             noWrap
-            component="div"
+            component={NavLink}
             sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
+            to="/"
           >
-            Store
+            <StorefrontOutlinedIcon sx={{ color: 'white' }} fontSize="large" />
           </Typography>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+            {categoryArr.map(({ id, title }) => (
+              <Button
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: 'white', display: 'block' }}
+                component={NavLink}
+                key={id}
+                to={`/category/${id}`}
+                className="test"
+              >
+                {title}
+              </Button>
+            ))}
+          </Box>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -62,9 +82,11 @@ const NavBar = () => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+              {categoryArr.map(({ id, title }) => (
+                <MenuItem key={id} onClick={handleCloseNavMenu}>
+                  <Button component={NavLink} to={`/category/${id}`}>
+                    {title}
+                  </Button>
                 </MenuItem>
               ))}
             </Menu>
@@ -72,23 +94,14 @@ const NavBar = () => {
           <Typography
             variant="h6"
             noWrap
-            component="div"
+            component={NavLink}
             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
+            to="/"
           >
-            Store
+            <StorefrontOutlinedIcon sx={{ color: 'white' }} fontSize="large" />
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
-            ))}
-          </Box>
 
+          <ContactWidget />
           <CartWidget />
         </Toolbar>
       </Container>

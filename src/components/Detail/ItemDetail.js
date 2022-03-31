@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 import Box from '@mui/material/Box'
 import Stack from '@mui/material/Stack'
 import Grid from '@mui/material/Grid'
@@ -5,13 +7,16 @@ import Card from '@mui/material/Card'
 import CardMedia from '@mui/material/CardMedia'
 import CardContent from '@mui/material/CardContent'
 import Typography from '@mui/material/Typography'
+import Button from '@mui/material/Button'
+import Rating from '@mui/material/Rating'
 import CircularProgress from '@mui/material/CircularProgress'
 
 import ItemCount from './ItemCount'
 import onAdd from '../../helpers/onAdd'
 
 const ItemDetail = ({ detail }) => {
-  const { title, category, description, price, image, stock } = detail || {}
+  const { id, title, category, description, price, rating, image, stock } =
+    detail || {}
 
   return (
     <>
@@ -21,6 +26,8 @@ const ItemDetail = ({ detail }) => {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
+            justifyContent: 'center',
+            height: '80vh',
           }}
         >
           <CircularProgress />
@@ -39,19 +46,35 @@ const ItemDetail = ({ detail }) => {
               </Grid>
               <Grid item xs={12} md={6}>
                 <CardContent>
-                  <Typography variant="overline" display="block" gutterBottom>
-                    {category}
-                  </Typography>
+                  <Grid container alignItems="center">
+                    <Button
+                      component={Link}
+                      to={`/category/${category.id}`}
+                      sx={{ ml: -1 }}
+                    >
+                      {category.title}
+                    </Button>
+                    <Typography variant="overline" sx={{ lineHeight: 2 }}>
+                      <span>| ID: {id}</span>
+                    </Typography>
+                  </Grid>
 
-                  <Typography
-                    component="h5"
-                    variant="h5"
-                    color="text.primary"
-                    gutterBottom
-                  >
+                  <Typography component="h4" variant="h5" color="text.primary">
                     {title}
                   </Typography>
-
+                  <Grid container alignItems="center" sx={{ mb: 1.5 }}>
+                    <Rating
+                      name="read-only"
+                      size="small"
+                      precision={0.1}
+                      value={rating.rate}
+                      readOnly
+                      sx={{ mr: 1 }}
+                    />
+                    <Typography variant="caption">
+                      {rating.count} reviews
+                    </Typography>
+                  </Grid>
                   <Typography
                     variant="caption"
                     display="block"
@@ -60,7 +83,6 @@ const ItemDetail = ({ detail }) => {
                   >
                     {description}
                   </Typography>
-
                   <Typography
                     component="h5"
                     variant="h5"
@@ -71,7 +93,6 @@ const ItemDetail = ({ detail }) => {
                   >
                     ${price}
                   </Typography>
-
                   <Stack>
                     <ItemCount
                       stock={stock}
@@ -80,7 +101,6 @@ const ItemDetail = ({ detail }) => {
                       text={'Comprar Ahora'}
                     />
                   </Stack>
-
                   <Typography
                     sx={{ mt: 1.5, fontSize: 14 }}
                     color="text.secondary"
