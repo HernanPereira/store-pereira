@@ -10,19 +10,19 @@ import { getCategoryName } from '../helpers/getAllProducts'
 import ItemListContainer from '../components/List'
 
 const Category = () => {
-  const { id } = useParams()
+  const { slug } = useParams()
   const [name, setName] = useState('')
 
   const getName = async () => {
     try {
-      const name = await getCategoryName(id)
+      const name = await getCategoryName(slug)
       setName(name)
     } catch (error) {
       console.log(`Error: ${error}`)
     }
   }
 
-  useEffect(() => getName(), [id])
+  useEffect(() => getName(), [slug])
 
   return (
     <Box sx={{ pt: 8, pb: 6, minHeight: '90vh' }} component="main">
@@ -44,7 +44,7 @@ const Category = () => {
 
       <Container maxWidth="lg">
         <Box sx={{ pt: 8, pb: 6 }}>
-          <ItemListContainer category={id} />
+          <ItemListContainer category={slug} />
         </Box>
       </Container>
     </Box>
