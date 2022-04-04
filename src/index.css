@@ -9,3 +9,27 @@
   left: 0;
   right: 0;
 }
+
+
+.img-hover{
+  display: block;
+  padding-top: 125%;
+  position: relative;
+}
+.img-hover .main-image{
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s linear;
+}
+.img-hover .hover-image{
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.01;
+  transition: all 0.2s linear;
+}
+.img-hover:hover .hover-image{
+  opacity: 1;  
+}
+

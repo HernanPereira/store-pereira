@@ -17,7 +17,7 @@ function App() {
     <BrowserRouter>
       <CssBaseline />
       <NavBar />
-      <Box sx={{ pt: 8, pb: 6, minHeight: '90vh' }} component="main">
+      <Box>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />

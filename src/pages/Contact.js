@@ -4,7 +4,7 @@ import Typography from '@mui/material/Typography'
 
 const Contact = () => {
   return (
-    <>
+    <Box sx={{ pt: 8, pb: 6, minHeight: '90vh' }} component="main">
       <Container maxWidth="md">
         <Box>
           <Typography
@@ -29,7 +29,7 @@ const Contact = () => {
           </Typography>
         </Box>
       </Container>
-    </>
+    </Box>
   )
 }
 

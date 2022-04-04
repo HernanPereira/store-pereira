@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer style={{ backgroundColor: '#222' }}>
       <Container>
-        <Box sx={{ pt: 2, pb: 2, color: '#fff' }}>
+        <Box sx={{ pt: 2, pb: 2, color: '#fff', height: 54 }}>
           <Typography align="center" sx={{ fontSize: 14 }}>
             &copy; Hernán Pereira
           </Typography>

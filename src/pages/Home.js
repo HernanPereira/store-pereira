@@ -1,57 +1,51 @@
 import Container from '@mui/material/Container'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
-import Divider from '@mui/material/Divider'
+import CardMedia from '@mui/material/CardMedia'
 
 import ItemListContainer from '../components/List'
 
 const Home = () => {
   return (
-    <>
-      <Container maxWidth="md">
-        <Box>
-          <Typography
-            component="h1"
-            variant="h2"
-            align="center"
-            color="text.primary"
-            gutterBottom
-          >
-            Bienvenidos
-          </Typography>
+    <Box sx={{ pb: 6 }} component="main">
+      <Box>
+        <CardMedia
+          component="img"
+          sx={{ mt: -6 }}
+          image={
+            'https://cf-images.us-east-1.prod.boltdns.net/v1/jit/72451143001/be3f34d0-190a-4f23-b040-6c67a4388e2f/main/1808x700/4s442ms/match/image.jpg'
+          }
+          alt={'home'}
+        />
+      </Box>
+      <Container maxWidth="lg">
+        <Box sx={{ pt: 6 }}>
           <Typography
             variant="h5"
             align="center"
             color="text.secondary"
             paragraph
           >
-            It was popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of Lorem
-            Ipsum.
+            Nuevos diseños con un toque clásico.
           </Typography>
-        </Box>
-        <Box sx={{ pt: 4 }}>
-          <Divider light />
+          <Typography
+            component="h1"
+            variant="h3"
+            align="center"
+            color="text.primary"
+            gutterBottom
+          >
+            Nuevos Diseños
+          </Typography>
         </Box>
       </Container>
 
       <Container maxWidth="lg">
-        <Box sx={{ pt: 6 }}>
-          <Typography
-            component="h3"
-            variant="h4"
-            align="center"
-            color="text.secondary"
-          >
-            Nuestras Ofertas
-          </Typography>
-        </Box>
         <Box sx={{ pt: 4, pb: 6 }}>
           <ItemListContainer />
         </Box>
       </Container>
-    </>
+    </Box>
   )
 }
 

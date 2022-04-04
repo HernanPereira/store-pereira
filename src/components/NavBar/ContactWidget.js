@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom'
 
 import Box from '@mui/material/Box'
 import IconButton from '@mui/material/IconButton'
-import EmailIcon from '@mui/icons-material/Email'
+import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined'
 
 const ContactWidget = () => {
   return (
@@ -11,10 +11,10 @@ const ContactWidget = () => {
         color="inherit"
         aria-label="contatct"
         component={NavLink}
-        to={`contact`}
+        to={'/contact'}
         className="contact"
       >
-        <EmailIcon />
+        <EmailOutlinedIcon />
       </IconButton>
     </Box>
   )

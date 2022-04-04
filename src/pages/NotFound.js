@@ -8,7 +8,7 @@ import HomeIcon from '@mui/icons-material/Home'
 
 const NotFound = () => {
   return (
-    <>
+    <Box sx={{ pt: 8, pb: 6, minHeight: '90vh' }} component="main">
       <Container maxWidth="lg">
         <Box>
           <Typography
@@ -41,7 +41,7 @@ const NotFound = () => {
           </Button>
         </Box>
       </Container>
-    </>
+    </Box>
   )
 }
 

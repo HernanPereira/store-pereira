@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 import Container from '@mui/material/Container'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
+import Skeleton from '@mui/material/Skeleton'
 
 import { getCategoryName } from '../helpers/getAllProducts'
 import ItemListContainer from '../components/List'
@@ -24,7 +25,7 @@ const Category = () => {
   useEffect(() => getName(), [id])
 
   return (
-    <>
+    <Box sx={{ pt: 8, pb: 6, minHeight: '90vh' }} component="main">
       <Box>
         <Typography
           component="h1"
@@ -32,9 +33,12 @@ const Category = () => {
           align="center"
           color="text.primary"
           gutterBottom
-          sx={{ textTransform: 'capitalize' }}
         >
-          {name}
+          {!name ? (
+            <Skeleton sx={{ m: '0 auto', width: { xs: '50%', md: '25%' } }} />
+          ) : (
+            <>{name}</>
+          )}
         </Typography>
       </Box>
 
@@ -43,7 +47,7 @@ const Category = () => {
           <ItemListContainer category={id} />
         </Box>
       </Container>
-    </>
+    </Box>
   )
 }
 
