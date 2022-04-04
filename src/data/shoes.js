@@ -176,7 +176,7 @@ const shoes = [
     category: {
       id: 2,
       title: 'Niño/a',
-      slug: 'ñino-a',
+      slug: 'nino-a',
     },
     image:
       'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/cc622c2f-b34c-45a0-975f-3e1135ea7f79/dynamo-go-zapatillas-faciles-de-poner-y-quitar-nino-a-pequeno-a-qmfPzS.png',
@@ -197,7 +197,7 @@ const shoes = [
     category: {
       id: 2,
       title: 'Niño/a',
-      slug: 'ñino-a',
+      slug: 'nino-a',
     },
     image:
       'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/e1debb53-eeb8-4418-905d-804e130d3fe8/air-max-90-ltr-se-zapatillas-nino-a-gTWbjn.png',
@@ -218,7 +218,7 @@ const shoes = [
     category: {
       id: 2,
       title: 'Niño/a',
-      slug: 'ñino-a',
+      slug: 'nino-a',
     },
     image:
       'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/ccc6fb39-f631-469f-b391-1e843affe2a7/air-max-motif-zapatillas-e-G9hjt9.png',
@@ -239,7 +239,7 @@ const shoes = [
     category: {
       id: 2,
       title: 'Niño/a',
-      slug: 'ñino-a',
+      slug: 'nino-a',
     },
     image:
       'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/56e0edac-1074-4e95-93b1-674e6e9db5ed/air-max-motif-zapatillas-nino-a-pequeno-a-cZKt36.png',
@@ -260,7 +260,7 @@ const shoes = [
     category: {
       id: 2,
       title: 'Niño/a',
-      slug: 'ñino-a',
+      slug: 'nino-a',
     },
     image:
       'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/3c26fc67-32df-43fd-af6d-778b9c671653/air-max-dawn-zapatillas-nino-a-hP6Qjv.png',
@@ -281,7 +281,7 @@ const shoes = [
     category: {
       id: 2,
       title: 'Niño/a',
-      slug: 'ñino-a',
+      slug: 'nino-a',
     },
     image:
       'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/cd617598-e2ab-4884-b79e-adc69ac732fd/air-vapormax-2021-fk-zapatillas-nino-a-cVcTnS.png',

@@ -47,13 +47,13 @@ const NavBar = () => {
               />
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-              {categoryArr.map(({ id, title }) => (
+              {categoryArr.map(({ id, slug, title }) => (
                 <Button
                   onClick={handleCloseNavMenu}
                   sx={{ my: 2, color: 'white', display: 'block' }}
                   component={NavLink}
                   key={id}
-                  to={`/category/${id}`}
+                  to={`/category/${slug}`}
                 >
                   {title}
                 </Button>
@@ -89,9 +89,9 @@ const NavBar = () => {
                   display: { xs: 'block', md: 'none' },
                 }}
               >
-                {categoryArr.map(({ id, title }) => (
+                {categoryArr.map(({ id, slug, title }) => (
                   <MenuItem key={id} onClick={handleCloseNavMenu}>
-                    <Button component={NavLink} to={`/category/${id}`}>
+                    <Button component={NavLink} to={`/category/${slug}`}>
                       {title}
                     </Button>
                   </MenuItem>

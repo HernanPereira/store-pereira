@@ -34,7 +34,7 @@ const Item = ({ item, onAdd }) => {
       <CardContent>
         <Button
           component={Link}
-          to={`/category/${category.id}`}
+          to={`/category/${category.slug}`}
           sx={{ ml: -1 }}
         >
           {category.title}

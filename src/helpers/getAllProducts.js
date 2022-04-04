@@ -8,7 +8,7 @@ const getAllProducts = (searchCategory) => {
   const newList = shuffle(allProducts)
 
   const getByCategory = allProducts.filter((item) => {
-    return item.category.id === Number(searchCategory) ? item : null
+    return item.category.slug === searchCategory ? item : null
   })
 
   return new Promise((resolve, reject) =>
@@ -46,9 +46,9 @@ const getCategories = () => {
 /*
 Get category name
 */
-const getCategoryName = (categoryId) => {
+const getCategoryName = (categorySlug) => {
   const grayWizard = allProducts.find(
-    (item) => item.category.id === Number(categoryId)
+    (item) => item.category.slug === categorySlug
   )
 
   return new Promise((resolve, reject) => {
