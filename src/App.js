@@ -12,23 +12,27 @@ import Details from './pages/Details'
 import Category from './pages/Category'
 import NotFound from './pages/NotFound'
 
+import { CartProvider } from './context/CartContext'
+
 function App() {
   return (
-    <BrowserRouter>
-      <CssBaseline />
-      <NavBar />
-      <Box>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/item/:id" element={<Details />} />
-          <Route path="/category/:slug" element={<Category />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Box>
-      <Footer />
-    </BrowserRouter>
+    <CartProvider value={[]}>
+      <BrowserRouter>
+        <CssBaseline />
+        <NavBar />
+        <Box>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/item/:id" element={<Details />} />
+            <Route path="/category/:slug" element={<Category />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Box>
+        <Footer />
+      </BrowserRouter>
+    </CartProvider>
   )
 }
 

@@ -1,14 +1,18 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
+
+import { CartContext } from '../../context/CartContext'
 
 import Stack from '@mui/material/Stack'
 import Button from '@mui/material/Button'
 import ButtonGroup from '@mui/material/ButtonGroup'
 
-const ItemCount = ({ stock, initial, onAdd, text, handleShowCount }) => {
+const ItemCount = ({ stock, initial, onAdd, text, item, handleShowCount }) => {
   const [qty, setQty] = useState(stock === 0 ? stock : initial)
 
   const handleIncrement = () => qty < stock && setQty(qty + 1)
   const handleDecrement = () => qty > 1 && setQty(qty - 1)
+
+  const { addItem } = useContext(CartContext)
 
   return (
     <div align="center">
@@ -30,6 +34,7 @@ const ItemCount = ({ stock, initial, onAdd, text, handleShowCount }) => {
           onClick={() => {
             onAdd(qty)
             handleShowCount()
+            addItem(item, qty)
           }}
           disabled={stock === 0 && true}
           sx={{

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useContext, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 import Box from '@mui/material/Box'
@@ -15,16 +15,19 @@ import Skeleton from '@mui/material/Skeleton'
 import ItemCount from './ItemCount'
 import onAdd from '../../helpers/onAdd'
 
+import { CartContext } from '../../context/CartContext'
+
 const ItemDetail = ({ detail }) => {
   const { id, title, category, description, price, rating, image, stock } =
     detail || {}
 
+  const { cart } = useContext(CartContext)
+
   const [showCount, setShowCount] = useState(true)
 
-  const handleShowCount = () => {
-    console.log('Show button "Finalizar compra"')
-    setShowCount(false)
-  }
+  const handleShowCount = () => setShowCount(false)
+
+  useEffect(() => cart.length <= 0 && setShowCount(true), [cart])
 
   return (
     <>
@@ -153,6 +156,7 @@ const ItemDetail = ({ detail }) => {
                       stock={stock}
                       initial={1}
                       onAdd={onAdd}
+                      item={detail}
                       handleShowCount={handleShowCount}
                       text={'Comprar Ahora'}
                     />
