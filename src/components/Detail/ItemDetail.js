@@ -1,5 +1,5 @@
 import { useState, useContext, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 import Box from '@mui/material/Box'
 import Stack from '@mui/material/Stack'
@@ -9,8 +9,12 @@ import CardContent from '@mui/material/CardContent'
 import Typography from '@mui/material/Typography'
 import Button from '@mui/material/Button'
 import Rating from '@mui/material/Rating'
-import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined'
+import RocketLaunchOutlinedIcon from '@mui/icons-material/RocketLaunchOutlined'
 import Skeleton from '@mui/material/Skeleton'
+import Snackbar from '@mui/material/Snackbar'
+import Alert from '@mui/material/Alert'
+
+import Carousel from 'react-material-ui-carousel'
 
 import ItemCount from './ItemCount'
 import onAdd from '../../helpers/onAdd'
@@ -18,19 +22,60 @@ import onAdd from '../../helpers/onAdd'
 import { CartContext } from '../../context/CartContext'
 
 const ItemDetail = ({ detail }) => {
-  const { id, title, category, description, price, rating, image, stock } =
-    detail || {}
+  const {
+    id: idDetail,
+    title,
+    category,
+    description,
+    price,
+    rating,
+    images,
+    // image,
+    // image1,
+    stock,
+  } = detail || {}
 
-  const { cart } = useContext(CartContext)
+  const { id } = useParams()
+  const { cart, isInCart } = useContext(CartContext)
 
   const [showCount, setShowCount] = useState(true)
+  const [open, setOpen] = useState(false)
 
   const handleShowCount = () => setShowCount(false)
 
-  useEffect(() => cart.length <= 0 && setShowCount(true), [cart])
+  const handleClickSnackbar = () => setOpen(true)
+  const handleCloseSnackbar = () => setOpen(false)
+
+  const existInCart = () => {
+    isInCart(Number(id)) ? setShowCount(false) : setShowCount(true)
+  }
+
+  useEffect(() => {
+    cart.length <= 0 && setShowCount(true)
+    existInCart()
+  }, [cart])
 
   return (
     <>
+      <div>
+        <Snackbar
+          open={open}
+          autoHideDuration={4000}
+          anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+          onClose={handleCloseSnackbar}
+        >
+          <Alert
+            onClose={handleCloseSnackbar}
+            variant="filled"
+            severity="success"
+            sx={{
+              width: '100%',
+            }}
+          >
+            <strong>{title}</strong> se agregó correctamente!!
+          </Alert>
+        </Snackbar>
+      </div>
       <Box
         sx={{
           display: { xs: 'block', md: 'grid' },
@@ -45,21 +90,38 @@ const ItemDetail = ({ detail }) => {
               sx={{ height: { xs: '50vh', md: 'calc(100vh - 123px)' } }}
             />
           ) : (
-            <CardMedia
-              component="img"
-              image={image}
-              alt={title}
-              sx={{
-                height: {
-                  xs: '50vh',
-                  md: 'calc(100vh - 123px)',
-                },
-                mb: {
-                  xs: 4,
-                  md: 0,
-                },
-              }}
-            />
+            <>
+              <Carousel
+                animation="fade"
+                indicators={false}
+                interval={2500}
+                sx={{
+                  height: {
+                    xs: '50vh',
+                    md: 'calc(100vh - 123px)',
+                  },
+                }}
+              >
+                {images.map((image, i) => (
+                  <CardMedia
+                    key={i}
+                    component="img"
+                    image={image}
+                    alt={title}
+                    sx={{
+                      height: {
+                        xs: '50vh',
+                        md: 'calc(100vh - 123px)',
+                      },
+                      mb: {
+                        xs: 4,
+                        md: 0,
+                      },
+                    }}
+                  />
+                ))}
+              </Carousel>
+            </>
           )}
         </div>
         <Stack
@@ -112,7 +174,7 @@ const ItemDetail = ({ detail }) => {
                     {category.title}
                   </Button>
                   <Typography variant="overline" sx={{ lineHeight: 2 }}>
-                    <span>| ID: {id}</span>
+                    <span>| ID: {idDetail}</span>
                   </Typography>
                 </Grid>
 
@@ -151,24 +213,27 @@ const ItemDetail = ({ detail }) => {
                   ${price}
                 </Typography>
                 <Stack alignItems="center" sx={{ pt: 2, pb: 2 }}>
-                  {showCount ? (
-                    <ItemCount
-                      stock={stock}
-                      initial={1}
-                      onAdd={onAdd}
-                      item={detail}
-                      handleShowCount={handleShowCount}
-                      text={'Comprar Ahora'}
-                    />
-                  ) : (
+                  <ItemCount
+                    stock={stock}
+                    initial={1}
+                    onAdd={onAdd}
+                    item={detail}
+                    handleShowCount={handleShowCount}
+                    handleClickSnackbar={handleClickSnackbar}
+                    text={
+                      !showCount ? 'Agregar más productos' : 'Comprar Ahora'
+                    }
+                  />
+                  {!showCount && (
                     <Button
-                      variant="outlined"
+                      variant="contained"
                       component={Link}
                       to={'/cart'}
                       sx={{
                         width: { xs: '100%', md: 'auto' },
+                        mt: 2,
                       }}
-                      startIcon={<ShoppingCartOutlinedIcon />}
+                      startIcon={<RocketLaunchOutlinedIcon />}
                     >
                       Finalizar compra
                     </Button>

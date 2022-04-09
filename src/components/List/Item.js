@@ -8,8 +8,7 @@ import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
 
 const Item = ({ item, onAdd }) => {
-  const { id, title, category, description, price, image, imageHover, stock } =
-    item
+  const { id, title, category, description, price, image, image1, stock } = item
 
   return (
     <Card align="center">
@@ -24,7 +23,7 @@ const Item = ({ item, onAdd }) => {
         <CardMedia
           component="img"
           sx={{ maxHeight: 460 }}
-          image={imageHover}
+          image={image1}
           alt={title}
           className="hover-image"
         />
@@ -66,10 +65,6 @@ const Item = ({ item, onAdd }) => {
           gutterBottom
         >
           ${price}{' '}
-          {/* {category
-            .toLowerCase()
-            .replace(/ /g, '-')
-            .replace(/[^\w-]+/g, '')} */}
         </Typography>
 
         <Typography sx={{ mt: 1.5, fontSize: 14 }} color="text.secondary">

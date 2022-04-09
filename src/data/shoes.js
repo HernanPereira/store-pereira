@@ -10,9 +10,17 @@ const shoes = [
       title: 'Hombre',
       slug: 'hombre',
     },
+    images: [
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/e02d3799-6d2f-422a-b3cc-424b0faa046b/air-zoom-infinity-tour-next-zapatillas-de-golf-40Bmh8.png',
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/21665253-8ef5-4cc5-a262-425ffaa95569/air-zoom-infinity-tour-next-zapatillas-de-golf-40Bmh8.png',
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/e44fc4e5-6153-43b1-994c-b6db721a3db3/air-zoom-infinity-tour-next-zapatillas-de-golf-40Bmh8.png',
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/69808981-5eea-41ef-8911-8b3c4d324ac4/air-zoom-infinity-tour-next-zapatillas-de-golf-40Bmh8.png',
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/1e334b22-bcf9-4518-8c10-6404e73ed5fe/air-zoom-infinity-tour-next-zapatillas-de-golf-40Bmh8.png',
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/e7b03941-5c78-48a1-b1de-0b0844012ee3/air-zoom-infinity-tour-next-zapatillas-de-golf-40Bmh8.png',
+    ],
     image:
       'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/e02d3799-6d2f-422a-b3cc-424b0faa046b/air-zoom-infinity-tour-next-zapatillas-de-golf-40Bmh8.png',
-    imageHover:
+    image1:
       'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/21665253-8ef5-4cc5-a262-425ffaa95569/air-zoom-infinity-tour-next-zapatillas-de-golf-40Bmh8.png',
     stock: 0,
     rating: {
@@ -31,9 +39,17 @@ const shoes = [
       title: 'Hombre',
       slug: 'hombre',
     },
+    images: [
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/5dd48037-7efc-4ec6-b94c-5ef032e411be/zoom-fly-4-zapatillas-de-running-asfalto-92C17b.png',
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/68544dc0-6a16-48f7-ba10-cf5a48e30b8f/zoom-fly-4-zapatillas-de-running-asfalto-92C17b.png',
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/89e34b8c-0896-4d0d-ad4f-1a52115f43e6/zoom-fly-4-zapatillas-de-running-asfalto-92C17b.png',
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/a7e39727-8bfd-4527-9ab2-e644ce188eaf/zoom-fly-4-zapatillas-de-running-asfalto-92C17b.png',
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/58f2a26a-652c-4bcd-86e7-a88d3394c82b/zoom-fly-4-zapatillas-de-running-asfalto-92C17b.png',
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/2bcf9b10-a8bf-44ea-942a-a44e863fe00f/zoom-fly-4-zapatillas-de-running-asfalto-92C17b.png',
+    ],
     image:
       'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/5dd48037-7efc-4ec6-b94c-5ef032e411be/zoom-fly-4-zapatillas-de-running-asfalto-92C17b.png',
-    imageHover:
+    image1:
       'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/68544dc0-6a16-48f7-ba10-cf5a48e30b8f/zoom-fly-4-zapatillas-de-running-asfalto-92C17b.png',
     stock: 259,
     rating: {
@@ -52,9 +68,13 @@ const shoes = [
       title: 'Hombre',
       slug: 'hombre',
     },
+    images: [
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/35e4608f-5ac5-474f-8498-2ff32483258c/air-max-terrascape-90-zapatillas-7KCxlX.png',
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/824dee2c-316e-4abc-9bec-ac62900f6297/air-max-terrascape-90-zapatillas-7KCxlX.png',
+    ],
     image:
       'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/35e4608f-5ac5-474f-8498-2ff32483258c/air-max-terrascape-90-zapatillas-7KCxlX.png',
-    imageHover:
+    image1:
       'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/824dee2c-316e-4abc-9bec-ac62900f6297/air-max-terrascape-90-zapatillas-7KCxlX.png',
     stock: 500,
     rating: {
@@ -73,9 +93,13 @@ const shoes = [
       title: 'Hombre',
       slug: 'hombre',
     },
+    images: [
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/d8456b17-5d3a-4f87-8c41-9b4e25c03674/air-max-dawn-zapatillas-NbHFzR.png',
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/36218443-6257-49e0-84ea-8c2b23fa49bf/air-max-dawn-zapatillas-NbHFzR.png',
+    ],
     image:
       'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/d8456b17-5d3a-4f87-8c41-9b4e25c03674/air-max-dawn-zapatillas-NbHFzR.png',
-    imageHover:
+    image1:
       'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/36218443-6257-49e0-84ea-8c2b23fa49bf/air-max-dawn-zapatillas-NbHFzR.png',
     stock: 430,
     rating: {
@@ -94,9 +118,13 @@ const shoes = [
       title: 'Mujer',
       slug: 'mujer',
     },
+    images: [
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/b7a0ce9a-79e2-4050-9a60-042077545162/kyrie-infinity-zapatillas-de-baloncesto-9kVzfc.png',
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/ec3d180d-7491-4ef0-9863-0038a5c91059/kyrie-infinity-zapatillas-de-baloncesto-9kVzfc.png',
+    ],
     image:
       'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/b7a0ce9a-79e2-4050-9a60-042077545162/kyrie-infinity-zapatillas-de-baloncesto-9kVzfc.png',
-    imageHover:
+    image1:
       'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/ec3d180d-7491-4ef0-9863-0038a5c91059/kyrie-infinity-zapatillas-de-baloncesto-9kVzfc.png',
     stock: 400,
     rating: {
@@ -115,9 +143,17 @@ const shoes = [
       title: 'Mujer',
       slug: 'mujer',
     },
+    images: [
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/649b3967-9785-46a6-8d4d-20177aeecc35/react-infinity-run-flyknit-3-zapatillas-de-running-asfalto-V2tvkX.png',
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/4398eb37-db6d-4715-8c24-fb432e9dcce7/react-infinity-run-flyknit-3-zapatillas-de-running-asfalto-V2tvkX.png',
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/20de8411-5df7-412f-8c96-4813117116a1/react-infinity-run-flyknit-3-zapatillas-de-running-asfalto-10zH4q.png',
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/a00a5d45-1b5e-46f8-a3a5-d86632f9075a/react-infinity-run-flyknit-3-zapatillas-de-running-asfalto-10zH4q.png',
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/9703fcc9-c597-470b-9ff8-26dc392b75f0/react-infinity-run-flyknit-3-zapatillas-de-running-asfalto-10zH4q.png',
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/ebd43b55-3d36-4bfe-81d0-cca2a42bde70/react-infinity-run-flyknit-3-zapatillas-de-running-asfalto-10zH4q.png',
+    ],
     image:
       'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/649b3967-9785-46a6-8d4d-20177aeecc35/react-infinity-run-flyknit-3-zapatillas-de-running-asfalto-V2tvkX.png',
-    imageHover:
+    image1:
       'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/4398eb37-db6d-4715-8c24-fb432e9dcce7/react-infinity-run-flyknit-3-zapatillas-de-running-asfalto-V2tvkX.png',
     stock: 70,
     rating: {
@@ -136,9 +172,13 @@ const shoes = [
       title: 'Mujer',
       slug: 'mujer',
     },
+    images: [
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/465ab10b-d24f-4d78-98eb-f94db71fbdbd/lebron-19-zapatillas-de-baloncesto-4vzDNT.png',
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/c13adec0-4806-4540-b499-66952d851ad7/lebron-19-zapatillas-de-baloncesto-4vzDNT.png',
+    ],
     image:
       'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/465ab10b-d24f-4d78-98eb-f94db71fbdbd/lebron-19-zapatillas-de-baloncesto-4vzDNT.png',
-    imageHover:
+    image1:
       'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/c13adec0-4806-4540-b499-66952d851ad7/lebron-19-zapatillas-de-baloncesto-4vzDNT.png',
     stock: 400,
     rating: {
@@ -157,9 +197,13 @@ const shoes = [
       title: 'Mujer',
       slug: 'mujer',
     },
+    images: [
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/cfa3a9e0-5825-4fb5-94b7-d15a41533d0b/metcon-7-zapatillas-de-entrenamiento-CHLK3h.png',
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/dccb9712-434b-412c-b5bf-a528444b10b1/metcon-7-zapatillas-de-entrenamiento-CHLK3h.png',
+    ],
     image:
       'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/cfa3a9e0-5825-4fb5-94b7-d15a41533d0b/metcon-7-zapatillas-de-entrenamiento-CHLK3h.png',
-    imageHover:
+    image1:
       'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/dccb9712-434b-412c-b5bf-a528444b10b1/metcon-7-zapatillas-de-entrenamiento-CHLK3h.png',
     stock: 100,
     rating: {
@@ -178,9 +222,13 @@ const shoes = [
       title: 'Niño/a',
       slug: 'nino-a',
     },
+    images: [
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/cc622c2f-b34c-45a0-975f-3e1135ea7f79/dynamo-go-zapatillas-faciles-de-poner-y-quitar-nino-a-pequeno-a-qmfPzS.png',
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/c3e89522-1cd5-4fdc-86b6-f77a9a5f9e9f/dynamo-go-zapatillas-faciles-de-poner-y-quitar-nino-a-pequeno-a-qmfPzS.png',
+    ],
     image:
       'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/cc622c2f-b34c-45a0-975f-3e1135ea7f79/dynamo-go-zapatillas-faciles-de-poner-y-quitar-nino-a-pequeno-a-qmfPzS.png',
-    imageHover:
+    image1:
       'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/c3e89522-1cd5-4fdc-86b6-f77a9a5f9e9f/dynamo-go-zapatillas-faciles-de-poner-y-quitar-nino-a-pequeno-a-qmfPzS.png',
     stock: 203,
     rating: {
@@ -199,9 +247,13 @@ const shoes = [
       title: 'Niño/a',
       slug: 'nino-a',
     },
+    images: [
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/e1debb53-eeb8-4418-905d-804e130d3fe8/air-max-90-ltr-se-zapatillas-nino-a-gTWbjn.png',
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/2949aa08-e090-43a6-8cde-45963fac273e/air-max-90-ltr-se-zapatillas-nino-a-gTWbjn.png',
+    ],
     image:
       'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/e1debb53-eeb8-4418-905d-804e130d3fe8/air-max-90-ltr-se-zapatillas-nino-a-gTWbjn.png',
-    imageHover:
+    image1:
       'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/2949aa08-e090-43a6-8cde-45963fac273e/air-max-90-ltr-se-zapatillas-nino-a-gTWbjn.png',
     stock: 470,
     rating: {
@@ -220,9 +272,13 @@ const shoes = [
       title: 'Niño/a',
       slug: 'nino-a',
     },
+    images: [
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/ccc6fb39-f631-469f-b391-1e843affe2a7/air-max-motif-zapatillas-e-G9hjt9.png',
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/b7396137-bb91-42f7-bd03-5b542d0a6507/air-max-motif-zapatillas-e-G9hjt9.png',
+    ],
     image:
       'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/ccc6fb39-f631-469f-b391-1e843affe2a7/air-max-motif-zapatillas-e-G9hjt9.png',
-    imageHover:
+    image1:
       'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/b7396137-bb91-42f7-bd03-5b542d0a6507/air-max-motif-zapatillas-e-G9hjt9.png',
     stock: 319,
     rating: {
@@ -241,9 +297,13 @@ const shoes = [
       title: 'Niño/a',
       slug: 'nino-a',
     },
+    images: [
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/56e0edac-1074-4e95-93b1-674e6e9db5ed/air-max-motif-zapatillas-nino-a-pequeno-a-cZKt36.png',
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/fa89aede-0a3e-4b3f-9e4f-e55ac9e4e2d8/air-max-motif-zapatillas-nino-a-pequeno-a-cZKt36.png',
+    ],
     image:
       'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/56e0edac-1074-4e95-93b1-674e6e9db5ed/air-max-motif-zapatillas-nino-a-pequeno-a-cZKt36.png',
-    imageHover:
+    image1:
       'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/fa89aede-0a3e-4b3f-9e4f-e55ac9e4e2d8/air-max-motif-zapatillas-nino-a-pequeno-a-cZKt36.png',
     stock: 400,
     rating: {
@@ -262,9 +322,13 @@ const shoes = [
       title: 'Niño/a',
       slug: 'nino-a',
     },
+    images: [
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/3c26fc67-32df-43fd-af6d-778b9c671653/air-max-dawn-zapatillas-nino-a-hP6Qjv.png',
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/fff2ac67-58ac-423f-9691-9ba46561e529/air-max-dawn-zapatillas-nino-a-hP6Qjv.png',
+    ],
     image:
       'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/3c26fc67-32df-43fd-af6d-778b9c671653/air-max-dawn-zapatillas-nino-a-hP6Qjv.png',
-    imageHover:
+    image1:
       'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/fff2ac67-58ac-423f-9691-9ba46561e529/air-max-dawn-zapatillas-nino-a-hP6Qjv.png',
     stock: 250,
     rating: {
@@ -283,9 +347,13 @@ const shoes = [
       title: 'Niño/a',
       slug: 'nino-a',
     },
+    images: [
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/cd617598-e2ab-4884-b79e-adc69ac732fd/air-vapormax-2021-fk-zapatillas-nino-a-cVcTnS.png',
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/24a18409-9292-4441-b4cd-ca250a45c8aa/air-vapormax-2021-fk-zapatillas-nino-a-cVcTnS.png',
+    ],
     image:
       'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/cd617598-e2ab-4884-b79e-adc69ac732fd/air-vapormax-2021-fk-zapatillas-nino-a-cVcTnS.png',
-    imageHover:
+    image1:
       'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/24a18409-9292-4441-b4cd-ca250a45c8aa/air-vapormax-2021-fk-zapatillas-nino-a-cVcTnS.png',
     stock: 140,
     rating: {
@@ -305,9 +373,13 @@ const shoes = [
       title: 'Fútbol',
       slug: 'futbol',
     },
+    images: [
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/3632425c-6988-4290-bccb-f3b3c1e2bddd/phantom-gt2-elite-sg-pro-ac-botas-de-futbol-terreno-blando-0639bz.png',
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/cea39718-d575-42e7-9b45-e47355fa145a/phantom-gt2-elite-sg-pro-ac-botas-de-futbol-terreno-blando-0639bz.png',
+    ],
     image:
       'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/3632425c-6988-4290-bccb-f3b3c1e2bddd/phantom-gt2-elite-sg-pro-ac-botas-de-futbol-terreno-blando-0639bz.png',
-    imageHover:
+    image1:
       'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/cea39718-d575-42e7-9b45-e47355fa145a/phantom-gt2-elite-sg-pro-ac-botas-de-futbol-terreno-blando-0639bz.png',
     stock: 235,
     rating: {
@@ -326,9 +398,13 @@ const shoes = [
       title: 'Fútbol',
       slug: 'futbol',
     },
+    images: [
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/624353da-8fa3-4666-946e-66ae14a271eb/mercurial-superfly-8-academy-sg-pro-anti-clog-traction-botas-de-futbol-terreno-blando-hWTXtc.png',
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/962120af-3b2a-485e-8e79-c3d6d81d827d/mercurial-superfly-8-academy-sg-pro-anti-clog-traction-botas-de-futbol-terreno-blando-hWTXtc.png',
+    ],
     image:
       'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/624353da-8fa3-4666-946e-66ae14a271eb/mercurial-superfly-8-academy-sg-pro-anti-clog-traction-botas-de-futbol-terreno-blando-hWTXtc.png',
-    imageHover:
+    image1:
       'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/962120af-3b2a-485e-8e79-c3d6d81d827d/mercurial-superfly-8-academy-sg-pro-anti-clog-traction-botas-de-futbol-terreno-blando-hWTXtc.png',
     stock: 340,
     rating: {
@@ -347,9 +423,13 @@ const shoes = [
       title: 'Fútbol',
       slug: 'futbol',
     },
+    images: [
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/7bc34fc6-5e87-4681-be4d-6ab08fc9b399/tiempo-legend-9-academy-sg-pro-ac-botas-de-futbol-terreno-blando-tkKvWr.png',
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/2925b868-1739-49c6-9880-83560a586350/tiempo-legend-9-academy-sg-pro-ac-botas-de-futbol-terreno-blando-tkKvWr.png',
+    ],
     image:
       'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/7bc34fc6-5e87-4681-be4d-6ab08fc9b399/tiempo-legend-9-academy-sg-pro-ac-botas-de-futbol-terreno-blando-tkKvWr.png',
-    imageHover:
+    image1:
       'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/2925b868-1739-49c6-9880-83560a586350/tiempo-legend-9-academy-sg-pro-ac-botas-de-futbol-terreno-blando-tkKvWr.png',
     stock: 679,
     rating: {
@@ -368,9 +448,13 @@ const shoes = [
       title: 'Fútbol',
       slug: 'futbol',
     },
+    images: [
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/d46d112d-4036-4452-8f5d-10729314bb80/premier-3-sg-pro-anti-clog-traction-botas-de-futbol-terreno-blando-Q32hVx.png',
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/73a8aa3c-18a9-4cd0-a428-aab1eb1328db/premier-3-sg-pro-anti-clog-traction-botas-de-futbol-terreno-blando-Q32hVx.png',
+    ],
     image:
       'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/d46d112d-4036-4452-8f5d-10729314bb80/premier-3-sg-pro-anti-clog-traction-botas-de-futbol-terreno-blando-Q32hVx.png',
-    imageHover:
+    image1:
       'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/73a8aa3c-18a9-4cd0-a428-aab1eb1328db/premier-3-sg-pro-anti-clog-traction-botas-de-futbol-terreno-blando-Q32hVx.png',
     stock: 130,
     rating: {
@@ -389,9 +473,13 @@ const shoes = [
       title: 'Fútbol',
       slug: 'futbol',
     },
+    images: [
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/1ae4b11d-69c6-416f-bee1-520be692e49b/mercurial-superfly-8-elite-sg-pro-anti-clog-traction-botas-de-futbol-terreno-blando-fJf4xC.png',
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/02d031c9-ad30-4902-85c4-f4c543011f18/mercurial-superfly-8-elite-sg-pro-anti-clog-traction-botas-de-futbol-terreno-blando-fJf4xC.png',
+    ],
     image:
       'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/1ae4b11d-69c6-416f-bee1-520be692e49b/mercurial-superfly-8-elite-sg-pro-anti-clog-traction-botas-de-futbol-terreno-blando-fJf4xC.png',
-    imageHover:
+    image1:
       'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/02d031c9-ad30-4902-85c4-f4c543011f18/mercurial-superfly-8-elite-sg-pro-anti-clog-traction-botas-de-futbol-terreno-blando-fJf4xC.png',
     stock: 146,
     rating: {
@@ -410,9 +498,13 @@ const shoes = [
       title: 'Fútbol',
       slug: 'futbol',
     },
+    images: [
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/8e7d785d-056e-4055-a5de-bffaf06c04a8/tiempo-legend-9-elite-sg-pro-ac-botas-de-futbol-terreno-blando-n8XVq8.png',
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/c3a8dc1f-754f-4b09-b0e6-5ed911d6b9ae/tiempo-legend-9-elite-sg-pro-ac-botas-de-futbol-terreno-blando-n8XVq8.png',
+    ],
     image:
       'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/8e7d785d-056e-4055-a5de-bffaf06c04a8/tiempo-legend-9-elite-sg-pro-ac-botas-de-futbol-terreno-blando-n8XVq8.png',
-    imageHover:
+    image1:
       'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/c3a8dc1f-754f-4b09-b0e6-5ed911d6b9ae/tiempo-legend-9-elite-sg-pro-ac-botas-de-futbol-terreno-blando-n8XVq8.png',
     stock: 145,
     rating: {
@@ -431,9 +523,13 @@ const shoes = [
       title: 'Hombre',
       slug: 'hombre',
     },
+    images: [
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/3eb1a8f4-2bc9-470d-afd2-943fbeabc61c/blazer-mid-77-jumbo-zapatillas-3LXxgJ.png',
+      'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/0f040238-1f13-48cb-8339-06c7a4135141/blazer-mid-77-jumbo-zapatillas-3LXxgJ.png',
+    ],
     image:
       'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/3eb1a8f4-2bc9-470d-afd2-943fbeabc61c/blazer-mid-77-jumbo-zapatillas-3LXxgJ.png',
-    imageHover:
+    image1:
       'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/0f040238-1f13-48cb-8339-06c7a4135141/blazer-mid-77-jumbo-zapatillas-3LXxgJ.png',
     stock: 145,
     rating: {

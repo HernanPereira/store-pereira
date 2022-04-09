@@ -1,23 +1,40 @@
 import { createContext, useState, useEffect } from 'react'
+import { priceFormat, priceRow, cartTotal, TAX_RATE } from '../helpers/cartCalc'
 
 const CartContext = createContext([])
 
 const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([])
   const [qty, setQty] = useState(0)
+  const [total, setTotal] = useState(0)
+
+  const [open, setOpen] = useState(false)
+  const toggleDrawer = () => setOpen(!open)
 
   /*
   CART functions
   */
   const addItem = (item, qty) => {
-    if (!isInCart(item.id)) setCart([...cart, { item, qty }])
+    !isInCart(item.id)
+      ? setCart([...cart, { item, qty }])
+      : updateQtyInCart(item.id, qty)
   }
-  const removeItem = (itemId) =>
-    setCart(cart.filter(({ item }) => item.id !== itemId))
 
+  const removeItem = (id) => setCart(cart.filter(({ item }) => item.id !== id))
   const clear = () => setCart([])
+  const isInCart = (id) => cart.some(({ item }) => id === item.id)
+  const findInCart = (id) => cart.findIndex(({ item }) => id === item.id)
 
-  const isInCart = (id) => cart.some((prod) => id === prod.item.id)
+  const updateQtyInCart = (id, newQty) => {
+    const index = findInCart(id)
+    if (index !== -1) {
+      const item = cart[index]
+      const updatedItem = { ...item, qty: item.qty + newQty }
+      const updatedArray = [...cart]
+      updatedArray[index] = updatedItem
+      setCart(updatedArray)
+    }
+  }
 
   /*
   Badge Icon Quantity CART
@@ -38,6 +55,14 @@ const CartProvider = ({ children }) => {
     removeItem,
     clear,
     isInCart,
+    toggleDrawer,
+    open,
+    priceFormat,
+    priceRow,
+    total,
+    setTotal,
+    cartTotal,
+    TAX_RATE,
   }
 
   return <CartContext.Provider value={data}>{children}</CartContext.Provider>

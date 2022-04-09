@@ -1,4 +1,5 @@
-import { useState, useContext } from 'react'
+import { useContext } from 'react'
+import { useLocation } from 'react-router-dom'
 
 import Box from '@mui/material/Box'
 import Badge from '@mui/material/Badge'
@@ -11,17 +12,22 @@ import Typography from '@mui/material/Typography'
 
 import { CartContext } from '../../context/CartContext'
 
-import CartDrawer from '../Cart/CartDrawer'
+import { CartDrawer } from '../Cart'
 
 const CartWidget = () => {
-  const { qty } = useContext(CartContext)
-
-  const [open, setOpen] = useState(false)
-  const toggleDrawer = () => setOpen(!open)
+  const { qty, open, toggleDrawer } = useContext(CartContext)
+  const { pathname } = useLocation()
 
   return (
     <>
-      <IconButton color="inherit" aria-label="cart" onClick={toggleDrawer}>
+      <IconButton
+        color="inherit"
+        aria-label="cart"
+        sx={{
+          pointerEvents: pathname === '/cart' && 'none',
+        }}
+        onClick={toggleDrawer}
+      >
         <Badge color="secondary" badgeContent={qty}>
           <ShoppingBagOutlinedIcon />
         </Badge>

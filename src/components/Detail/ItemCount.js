@@ -6,7 +6,15 @@ import Stack from '@mui/material/Stack'
 import Button from '@mui/material/Button'
 import ButtonGroup from '@mui/material/ButtonGroup'
 
-const ItemCount = ({ stock, initial, onAdd, text, item, handleShowCount }) => {
+const ItemCount = ({
+  stock,
+  initial,
+  onAdd,
+  text,
+  item,
+  handleShowCount,
+  handleClickSnackbar,
+}) => {
   const [qty, setQty] = useState(stock === 0 ? stock : initial)
 
   const handleIncrement = () => qty < stock && setQty(qty + 1)
@@ -20,7 +28,7 @@ const ItemCount = ({ stock, initial, onAdd, text, item, handleShowCount }) => {
         <Button onClick={handleDecrement} disabled={qty <= 1 && true}>
           -
         </Button>
-        <Button disabled color="primary">
+        <Button disabled={qty >= stock && true} sx={{ pointerEvents: 'none' }}>
           {qty}
         </Button>
         <Button onClick={handleIncrement} disabled={qty >= stock && true}>
@@ -34,6 +42,7 @@ const ItemCount = ({ stock, initial, onAdd, text, item, handleShowCount }) => {
           onClick={() => {
             onAdd(qty)
             handleShowCount()
+            handleClickSnackbar()
             addItem(item, qty)
           }}
           disabled={stock === 0 && true}

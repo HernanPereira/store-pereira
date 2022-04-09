@@ -11,9 +11,10 @@ const Home = () => {
       <Box>
         <CardMedia
           component="img"
-          sx={{ mt: -6 }}
+          height="360"
+          sx={{}}
           image={
-            'https://cf-images.us-east-1.prod.boltdns.net/v1/jit/72451143001/be3f34d0-190a-4f23-b040-6c67a4388e2f/main/1808x700/4s442ms/match/image.jpg'
+            'https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_1822,c_limit/7a537b7e-4220-4cb8-82f7-5ed4177e3a70/site-oficial-de-nike.jpg'
           }
           alt={'home'}
         />
