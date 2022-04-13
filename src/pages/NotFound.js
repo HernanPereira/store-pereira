@@ -5,12 +5,13 @@ import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import Button from '@mui/material/Button'
 import HomeIcon from '@mui/icons-material/Home'
+import CardMedia from '@mui/material/CardMedia'
 
 const NotFound = () => {
   return (
     <Box sx={{ pt: 8, pb: 6, minHeight: '90vh' }} component="main">
       <Container maxWidth="lg">
-        <Box>
+        <Box sx={{ textAlign: 'center' }}>
           <Typography
             component="h1"
             variant="h2"
@@ -18,7 +19,7 @@ const NotFound = () => {
             color="text.primary"
             gutterBottom
           >
-            Page NotFound
+            Página no encontrada!!
           </Typography>
           <Typography
             variant="h5"
@@ -26,11 +27,17 @@ const NotFound = () => {
             color="text.secondary"
             paragraph
           >
-            It was popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of Lorem
-            Ipsum.
+            No te preocupes de ayudamos a volver a la home!!
           </Typography>
+          <CardMedia
+            component="img"
+            sx={{
+              maxWidth: 650,
+              m: '0 auto',
+            }}
+            image={'/404.jpg'}
+            alt={'404'}
+          />
           <Button
             component={Link}
             to={'/'}

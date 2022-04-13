@@ -1,14 +1,15 @@
-import { useParams } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 
 import Box from '@mui/material/Box'
 
 import ItemDetailContainer from '../components/Detail/ItemDetailContainer'
 
 const Details = () => {
-  const { id } = useParams()
+  const params = useLocation()
+
   return (
     <Box sx={{}} component="main">
-      <ItemDetailContainer id={id} />
+      <ItemDetailContainer id={params.state.id} />
     </Box>
   )
 }

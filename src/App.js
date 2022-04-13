@@ -6,7 +6,6 @@ import NavBar from './components/NavBar'
 import Footer from './components/Footer'
 
 import Home from './pages/Home'
-import Contact from './pages/Contact'
 import Cart from './pages/Cart'
 import Details from './pages/Details'
 import Category from './pages/Category'
@@ -16,16 +15,15 @@ import { CartProvider } from './context/CartContext'
 
 function App() {
   return (
-    <CartProvider value={[]}>
+    <CartProvider>
       <BrowserRouter>
         <CssBaseline />
         <NavBar />
         <Box>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/contact" element={<Contact />} />
             <Route path="/cart" element={<Cart />} />
-            <Route path="/item/:id" element={<Details />} />
+            <Route path="/item/:slug" element={<Details />} />
             <Route path="/category/:slug" element={<Category />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

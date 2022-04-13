@@ -7,7 +7,7 @@ import ItemListContainer from '../components/List'
 
 const Home = () => {
   return (
-    <Box sx={{ pb: 6 }} component="main">
+    <Box sx={{ pb: 6, minHeight: '100vh' }} component="main">
       <Box>
         <CardMedia
           component="img"

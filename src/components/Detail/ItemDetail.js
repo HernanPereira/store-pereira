@@ -1,5 +1,5 @@
 import { useState, useContext, useEffect } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 import Box from '@mui/material/Box'
 import Stack from '@mui/material/Stack'
@@ -35,23 +35,23 @@ const ItemDetail = ({ detail }) => {
     stock,
   } = detail || {}
 
-  const { id } = useParams()
+  const params = useLocation()
+
   const { cart, isInCart } = useContext(CartContext)
 
-  const [showCount, setShowCount] = useState(true)
   const [open, setOpen] = useState(false)
-
-  const handleShowCount = () => setShowCount(false)
-
   const handleClickSnackbar = () => setOpen(true)
   const handleCloseSnackbar = () => setOpen(false)
 
+  const [showCount, setShowCount] = useState(false)
+  const handleShowCount = () => setShowCount(true)
+
   const existInCart = () => {
-    isInCart(Number(id)) ? setShowCount(false) : setShowCount(true)
+    isInCart(params.state.id) ? setShowCount(true) : setShowCount(false)
   }
 
   useEffect(() => {
-    cart.length <= 0 && setShowCount(true)
+    cart.length <= 0 && setShowCount(false)
     existInCart()
   }, [cart])
 
@@ -220,11 +220,9 @@ const ItemDetail = ({ detail }) => {
                     item={detail}
                     handleShowCount={handleShowCount}
                     handleClickSnackbar={handleClickSnackbar}
-                    text={
-                      !showCount ? 'Agregar más productos' : 'Comprar Ahora'
-                    }
+                    text={showCount ? 'Agregar más productos' : 'Comprar Ahora'}
                   />
-                  {!showCount && (
+                  {showCount && (
                     <Button
                       variant="contained"
                       component={Link}

@@ -1,6 +1,6 @@
 import { NavLink, Link } from 'react-router-dom'
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import AppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box'
 import Toolbar from '@mui/material/Toolbar'
@@ -14,16 +14,25 @@ import MenuItem from '@mui/material/MenuItem'
 import CardMedia from '@mui/material/CardMedia'
 
 import CartWidget from './CartWidget'
-import ContactWidget from './ContactWidget'
 
-import { getCategories } from '../../helpers/getAllProducts'
+import { getCategories } from '../../helpers/getData'
 
 const NavBar = () => {
   const [anchorElNav, setAnchorElNav] = useState(null)
+  const [categories, setCategories] = useState([])
 
-  const categoryArr = getCategories()
   const handleOpenNavMenu = (e) => setAnchorElNav(e.currentTarget)
   const handleCloseNavMenu = () => setAnchorElNav(null)
+
+  const getCategoriesFirebase = async () => {
+    try {
+      const data = await getCategories()
+      setCategories(data)
+    } catch (error) {
+      console.log(`Error: ${error}`)
+    }
+  }
+  useEffect(() => getCategoriesFirebase(), [])
 
   return (
     <>
@@ -47,7 +56,7 @@ const NavBar = () => {
               />
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-              {categoryArr.map(({ id, slug, title }) => (
+              {categories.map(({ id, slug, title }) => (
                 <Button
                   onClick={handleCloseNavMenu}
                   sx={{ my: 2, color: 'white', display: 'block' }}
@@ -89,7 +98,7 @@ const NavBar = () => {
                   display: { xs: 'block', md: 'none' },
                 }}
               >
-                {categoryArr.map(({ id, slug, title }) => (
+                {categories.map(({ id, slug, title }) => (
                   <MenuItem key={id} onClick={handleCloseNavMenu}>
                     <Button component={NavLink} to={`/category/${slug}`}>
                       {title}
@@ -117,7 +126,6 @@ const NavBar = () => {
               />
             </Typography>
 
-            <ContactWidget />
             <CartWidget />
           </Toolbar>
         </Container>
