@@ -12,6 +12,8 @@ import Category from './pages/Category'
 import Orders from './pages/Orders'
 import NotFound from './pages/NotFound'
 
+import { Message } from './components/Cart/'
+
 import { CartProvider } from './context/CartContext'
 
 function App() {
@@ -32,6 +34,7 @@ function App() {
         </Box>
         <Footer />
       </BrowserRouter>
+      <Message />
     </CartProvider>
   )
 }

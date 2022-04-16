@@ -20,7 +20,7 @@ const ItemCount = ({
   const handleIncrement = () => qty < stock && setQty(qty + 1)
   const handleDecrement = () => qty > 1 && setQty(qty - 1)
 
-  const { addItem } = useContext(CartContext)
+  const { addItem, setProdMessage } = useContext(CartContext)
 
   return (
     <div align="center" style={{ width: '100%' }}>
@@ -44,6 +44,10 @@ const ItemCount = ({
             handleShowCount()
             handleClickSnackbar()
             addItem(item, qty)
+            setProdMessage({
+              name: item.title,
+              action: 'success',
+            })
           }}
           disabled={stock === 0 && true}
           sx={{

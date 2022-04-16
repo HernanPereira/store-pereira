@@ -13,8 +13,13 @@ import Divider from '@mui/material/Divider'
 import { CartContext } from '../../context/CartContext'
 
 const CartList = ({ item, qty }) => {
-  const { removeItem, toggleDrawer, priceFormat, priceRow } =
-    useContext(CartContext)
+  const {
+    removeItem,
+    priceFormat,
+    priceRow,
+    setProdMessage,
+    handleClickSnackbar,
+  } = useContext(CartContext)
 
   return (
     <>
@@ -23,7 +28,14 @@ const CartList = ({ item, qty }) => {
           <IconButton
             edge="end"
             aria-label="delete"
-            onClick={() => removeItem(item.id)}
+            onClick={() => {
+              handleClickSnackbar()
+              setProdMessage({
+                name: item.title,
+                action: 'warning',
+              })
+              removeItem(item.id)
+            }}
           >
             <DeleteIcon />
           </IconButton>
@@ -38,7 +50,7 @@ const CartList = ({ item, qty }) => {
               <Typography
                 component="h6"
                 color="text.primary"
-                onClick={() => toggleDrawer(false)}
+                // onClick={() => toggleDrawer(false)}
                 sx={{ display: 'block', textDecoration: 'none' }}
               >
                 {item.title}

@@ -14,6 +14,15 @@ const CartProvider = ({ children }) => {
   const [open, setOpen] = useState(false)
   const toggleDrawer = () => setOpen(!open)
 
+  const [openMessage, setOpenMessage] = useState(false)
+  const handleClickSnackbar = () => setOpenMessage(true)
+  const handleCloseSnackbar = () => setOpenMessage(false)
+
+  const [prodMessage, setProdMessage] = useState({
+    name: '',
+    action: 'info', // Add: success, Remove: warning, Order: info
+  })
+
   /*
   CART functions
   */
@@ -68,6 +77,11 @@ const CartProvider = ({ children }) => {
     TAX_RATE,
     orders,
     setOrders,
+    openMessage,
+    handleClickSnackbar,
+    handleCloseSnackbar,
+    prodMessage,
+    setProdMessage,
   }
 
   return <CartContext.Provider value={data}>{children}</CartContext.Provider>

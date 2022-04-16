@@ -16,7 +16,8 @@ import FormGroup from '@mui/material/FormGroup'
 import { sendOrder, updateProduct } from '../../helpers/getData'
 
 const Form = ({ cart, total }) => {
-  const { clear, orders, setOrders } = useContext(CartContext)
+  const { clear, orders, setOrders, setProdMessage, handleClickSnackbar } =
+    useContext(CartContext)
   const date = new Date(Timestamp.now().seconds * 1000)
   const [orderId, setOrderId] = useState('')
   const navigate = useNavigate()
@@ -54,6 +55,11 @@ const Form = ({ cart, total }) => {
     setOrderId(newId)
     setOrders([...orders, newId])
     updateProduct(items)
+    handleClickSnackbar()
+    setProdMessage({
+      name: 'Su orden se envió correctamente',
+      action: 'info',
+    })
 
     clear()
     reset()
