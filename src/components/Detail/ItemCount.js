@@ -23,7 +23,7 @@ const ItemCount = ({
   const { addItem } = useContext(CartContext)
 
   return (
-    <div align="center">
+    <div align="center" style={{ width: '100%' }}>
       <ButtonGroup variant="outlined" aria-label="outlined button group">
         <Button onClick={handleDecrement} disabled={qty <= 1 && true}>
           -

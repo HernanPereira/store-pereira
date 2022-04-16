@@ -9,6 +9,7 @@ import Home from './pages/Home'
 import Cart from './pages/Cart'
 import Details from './pages/Details'
 import Category from './pages/Category'
+import Orders from './pages/Orders'
 import NotFound from './pages/NotFound'
 
 import { CartProvider } from './context/CartContext'
@@ -22,6 +23,7 @@ function App() {
         <Box>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/orders" element={<Orders />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/item/:slug" element={<Details />} />
             <Route path="/category/:slug" element={<Category />} />

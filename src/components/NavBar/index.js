@@ -14,6 +14,7 @@ import MenuItem from '@mui/material/MenuItem'
 import CardMedia from '@mui/material/CardMedia'
 
 import CartWidget from './CartWidget'
+import OrderWidget from './OrderWidget'
 
 import { getCategories } from '../../helpers/getData'
 
@@ -126,6 +127,7 @@ const NavBar = () => {
               />
             </Typography>
 
+            <OrderWidget />
             <CartWidget />
           </Toolbar>
         </Container>

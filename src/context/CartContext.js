@@ -1,12 +1,15 @@
 import { createContext, useState, useEffect } from 'react'
 import { priceFormat, priceRow, cartTotal, TAX_RATE } from '../helpers/cartCalc'
 
+import { useLocalStorage } from '../components/hooks/useLocalStorage'
+
 const CartContext = createContext([])
 
 const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([])
   const [qty, setQty] = useState(0)
   const [total, setTotal] = useState(0)
+  const [orders, setOrders] = useLocalStorage('Orders', [])
 
   const [open, setOpen] = useState(false)
   const toggleDrawer = () => setOpen(!open)
@@ -63,6 +66,8 @@ const CartProvider = ({ children }) => {
     setTotal,
     cartTotal,
     TAX_RATE,
+    orders,
+    setOrders,
   }
 
   return <CartContext.Provider value={data}>{children}</CartContext.Provider>

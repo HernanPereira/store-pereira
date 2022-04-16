@@ -9,6 +9,7 @@ import ClearIcon from '@mui/icons-material/Clear'
 import Drawer from '@mui/material/Drawer'
 import Grid from '@mui/material/Grid'
 import Typography from '@mui/material/Typography'
+import Tooltip from '@mui/material/Tooltip'
 
 import { CartContext } from '../../context/CartContext'
 
@@ -20,18 +21,20 @@ const CartWidget = () => {
 
   return (
     <>
-      <IconButton
-        color="inherit"
-        aria-label="cart"
-        sx={{
-          pointerEvents: pathname === '/cart' && 'none',
-        }}
-        onClick={toggleDrawer}
-      >
-        <Badge color="secondary" badgeContent={qty}>
-          <ShoppingBagOutlinedIcon />
-        </Badge>
-      </IconButton>
+      <Tooltip sx={{}} title="Mi carrito" arrow>
+        <IconButton
+          color="inherit"
+          aria-label="cart"
+          sx={{
+            pointerEvents: pathname === '/cart' && 'none',
+          }}
+          onClick={toggleDrawer}
+        >
+          <Badge color="secondary" badgeContent={qty}>
+            <ShoppingBagOutlinedIcon />
+          </Badge>
+        </IconButton>
+      </Tooltip>
 
       <Drawer
         anchor={'right'}
@@ -51,7 +54,7 @@ const CartWidget = () => {
           >
             <ClearIcon sx={{ cursor: 'pointer' }} onClick={toggleDrawer} />
             <Typography sx={{}} variant="h6" component="span">
-              Tu Carrito
+              Mi Carrito
             </Typography>
             <Typography sx={{}} component="span">
               {qty} items

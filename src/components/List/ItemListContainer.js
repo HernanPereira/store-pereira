@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 
-/* import Box from '@mui/material/Box'
+import Box from '@mui/material/Box'
 import Skeleton from '@mui/material/Skeleton'
-import Grid from '@mui/material/Grid' */
+import Grid from '@mui/material/Grid'
 
 import ItemList from './ItemList'
 
@@ -24,9 +24,9 @@ const ItemListContainer = ({ category }) => {
     getProductsFirebase()
   }, [category])
 
-  /* return (
+  return (
     <>
-      {!products ? (
+      {products.length <= 0 ? (
         <Box sx={{ flexGrow: 1, pt: 8 }}>
           <Grid
             container
@@ -73,8 +73,7 @@ const ItemListContainer = ({ category }) => {
         <ItemList items={products} />
       )}
     </>
-  ) */
-  return <ItemList items={products} />
+  )
 }
 
 export default ItemListContainer

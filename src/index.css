@@ -34,3 +34,19 @@
 }
 
 .MuiDivider-root{ list-style-type: none;}
+
+.shop-form p {
+  color: #bf1650;
+  margin: 6px 0 0;
+  font-size: 14px;
+}
+
+.shop-form  p::before {
+  display: inline;
+  content: "⚠ ";
+}
+
+
+.table-body tr:nth-of-type(odd) td{
+  background-color: rgba(0, 0, 0, .05);
+}
