@@ -50,7 +50,6 @@ const CartList = ({ item, qty }) => {
               <Typography
                 component="h6"
                 color="text.primary"
-                // onClick={() => toggleDrawer(false)}
                 sx={{ display: 'block', textDecoration: 'none' }}
               >
                 {item.title}

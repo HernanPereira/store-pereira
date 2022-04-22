@@ -11,8 +11,6 @@ import Button from '@mui/material/Button'
 import Rating from '@mui/material/Rating'
 import RocketLaunchOutlinedIcon from '@mui/icons-material/RocketLaunchOutlined'
 import Skeleton from '@mui/material/Skeleton'
-/* import Snackbar from '@mui/material/Snackbar'
-import Alert from '@mui/material/Alert' */
 
 import Carousel from 'react-material-ui-carousel'
 
@@ -30,8 +28,6 @@ const ItemDetail = ({ detail }) => {
     price,
     rating,
     images,
-    // image,
-    // image1,
     stock,
   } = detail || {}
 
@@ -140,7 +136,6 @@ const ItemDetail = ({ detail }) => {
             </>
           ) : (
             <CardContent sx={{ p: 0 }}>
-              {/* <pre>{JSON.stringify(detail, null, 2)}</pre> */}
               <Grid container alignItems="center">
                 <Button
                   component={Link}

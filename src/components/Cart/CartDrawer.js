@@ -18,8 +18,6 @@ const CartDrawer = () => {
 
   useEffect(() => setTotal(priceFormat(cartTotal(cart))), [cart])
 
-  // return <pre>{JSON.stringify(cart, null, 2)}</pre>
-
   return (
     <>
       {cart.length <= 0 ? (

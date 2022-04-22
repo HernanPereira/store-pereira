@@ -6,10 +6,11 @@ import { useLocalStorage } from '../components/hooks/useLocalStorage'
 const CartContext = createContext([])
 
 const CartProvider = ({ children }) => {
-  const [cart, setCart] = useState([])
+  const [cartLocal, setCartLocal] = useLocalStorage('Cart', [])
+  const [orders, setOrders] = useLocalStorage('Orders', [])
+  const [cart, setCart] = useState(cartLocal)
   const [qty, setQty] = useState(0)
   const [total, setTotal] = useState(0)
-  const [orders, setOrders] = useLocalStorage('Orders', [])
 
   const [open, setOpen] = useState(false)
   const toggleDrawer = () => setOpen(!open)
@@ -27,13 +28,23 @@ const CartProvider = ({ children }) => {
   CART functions
   */
   const addItem = (item, qty) => {
-    !isInCart(item.id)
-      ? setCart([...cart, { item, qty }])
-      : updateQtyInCart(item.id, qty)
+    if (!isInCart(item.id)) {
+      setCart([...cart, { item, qty }])
+      setCartLocal([...cart, { item, qty }])
+    } else {
+      updateQtyInCart(item.id, qty)
+    }
   }
 
-  const removeItem = (id) => setCart(cart.filter(({ item }) => item.id !== id))
-  const clear = () => setCart([])
+  const removeItem = (id) => {
+    const cartUpdated = cart.filter(({ item }) => item.id !== id)
+    setCart(cartUpdated)
+    setCartLocal(cartUpdated)
+  }
+  const clear = () => {
+    setCart([])
+    setCartLocal([])
+  }
   const isInCart = (id) => cart.some(({ item }) => id === item.id)
   const findInCart = (id) => cart.findIndex(({ item }) => id === item.id)
 
@@ -45,6 +56,7 @@ const CartProvider = ({ children }) => {
       const updatedArray = [...cart]
       updatedArray[index] = updatedItem
       setCart(updatedArray)
+      setCartLocal(updatedArray)
     }
   }
 

@@ -30,13 +30,11 @@ yarn start or npm start
 
 _Y corre en el navegador [http://localhost:3000](http://localhost:3000)_
 
-## Demo 🖥️
-
-![store](https://user-images.githubusercontent.com/21273404/161108554-7f75aadb-0e58-4be4-ba1a-68324a6b85d1.gif)
-
 ## Despliegue 📦
 
-_proximamente..._
+La SPA esta alojada en NETLIFY.
+- [shoes-store](https://shoes-store-coder.netlify.app/)
+El CI (Continuous Deployment) se hace mediante la integración de GitHub y Netlify, este se encarga del de el Build del proyecto y su posterior publicación/actualización.
 
 ## Construido con 🛠️
 

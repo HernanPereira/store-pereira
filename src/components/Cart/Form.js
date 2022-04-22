@@ -12,6 +12,9 @@ import Button from '@mui/material/Button'
 import RocketLaunchOutlinedIcon from '@mui/icons-material/RocketLaunchOutlined'
 import TextField from '@mui/material/TextField'
 import FormGroup from '@mui/material/FormGroup'
+import Autocomplete from '@mui/material/Autocomplete'
+
+import { country, province } from '../../data/address'
 
 import { sendOrder, updateProduct } from '../../helpers/getData'
 
@@ -46,6 +49,10 @@ const Form = ({ cart, total }) => {
         name: data.Nombre,
         surname: data.Apellido,
         email: data.Email,
+        ...(data.Direccion && { address: data.Direccion }),
+        ...(data.Pais && { country: data.Pais }),
+        ...(data.Provincia && { province: data.Provincia }),
+        ...(data.CP && { cp: data.CP }),
       },
       items,
       date,
@@ -66,7 +73,6 @@ const Form = ({ cart, total }) => {
 
     navigate('/orders')
   }
-  // console.log(errors)
 
   return (
     <>
@@ -92,7 +98,7 @@ const Form = ({ cart, total }) => {
             gutterBottom
             sx={{ mb: 2 }}
           >
-            Información de Contacto: {orderId}
+            Información de Contacto {orderId}
           </Typography>
           <FormGroup>
             <TextField
@@ -112,7 +118,7 @@ const Form = ({ cart, total }) => {
             gutterBottom
             sx={{ mt: 2, mb: 2 }}
           >
-            Dirección de envío
+            Tus Datos
           </Typography>
           <FormGroup
             sx={{
@@ -152,6 +158,81 @@ const Form = ({ cart, total }) => {
               <p>Apellido es requerido</p>
             )}
           </FormGroup>
+
+          <Typography
+            component="h6"
+            variant="h5"
+            align="left"
+            color="text.primary"
+            gutterBottom
+            sx={{ mt: 2, mb: 2 }}
+          >
+            Dirección de envío
+          </Typography>
+
+          <FormGroup>
+            <TextField
+              label="Dirección"
+              variant="outlined"
+              sx={{ backgroundColor: '#fff', mb: 2 }}
+              {...register('Direccion', { required: false })}
+              fullWidth
+            />
+          </FormGroup>
+
+          <Autocomplete
+            disablePortal
+            id="combo-country"
+            options={country}
+            variant="outlined"
+            sx={{
+              backgroundColor: '#fff',
+              mb: 2,
+              mr: { xs: '0', md: '1%' },
+              width: { xs: '100%', md: '33%' },
+              display: 'inline-flex',
+            }}
+            renderInput={(params) => (
+              <TextField
+                {...register('Pais', { required: false })}
+                {...params}
+                label="País"
+              />
+            )}
+          />
+
+          <Autocomplete
+            disablePortal
+            id="combo-province"
+            options={province}
+            variant="outlined"
+            sx={{
+              backgroundColor: '#fff',
+              mb: 2,
+              mr: { xs: '0', md: '1%' },
+              width: { xs: '100%', md: '33%' },
+              display: 'inline-flex',
+            }}
+            renderInput={(params) => (
+              <TextField
+                {...register('Provincia', { required: false })}
+                {...params}
+                label="Provincia"
+              />
+            )}
+          />
+          <TextField
+            id="outlined-basic"
+            label="Código Postal"
+            variant="outlined"
+            sx={{
+              backgroundColor: '#fff',
+              mb: 2,
+              width: { xs: '100%', md: '32%' },
+            }}
+            {...register('CP', { required: false })}
+          />
+
           <Stack>
             <Button
               variant="contained"
