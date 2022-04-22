@@ -34,6 +34,7 @@ _Y corre en el navegador [http://localhost:3000](http://localhost:3000)_
 
 La SPA esta alojada en NETLIFY.
 - [shoes-store](https://shoes-store-coder.netlify.app/)
+
 El CI (Continuous Deployment) se hace mediante la integración de GitHub y Netlify, este se encarga del de el Build del proyecto y su posterior publicación/actualización.
 
 ## Construido con 🛠️
