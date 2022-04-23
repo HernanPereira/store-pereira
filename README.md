@@ -37,6 +37,16 @@ La SPA esta alojada en NETLIFY.
 
 El CI (Continuous Deployment) se hace mediante la integración de GitHub y Netlify, este se encarga del de el Build del proyecto y su posterior publicación/actualización.
 
+## Demo 🖥️
+
+### Agregando productos al carrito
+![add-to-cart](https://user-images.githubusercontent.com/21273404/164844910-bea2e713-9467-486d-a1f1-66b421ce0121.gif)
+
+### Checkout
+![checkout](https://user-images.githubusercontent.com/21273404/164844927-615dccc4-2af1-4f26-9f24-a639f561e04e.gif)
+
+
+
 ## Construido con 🛠️
 
 _Herramientas que utilizaste para crear tu proyecto_
